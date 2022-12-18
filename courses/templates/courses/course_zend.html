@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{#{% extends 'courses/courses_default.html' %}#}
+
+{% block title %}
+    Введение в Zend Framework
+{% endblock %}
+
+{% block aside %}
+  <aside class="my-aside">
+  <ul>
+    {% for el in course_articles %}
+      <li>
+        <a href= {% url el.article_url %}>
+        <p><b>{{ el.article_title }}</b></p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  </aside>
+{% endblock %}
+
+
+
+{% block hero %}
+  <h1>{{ h1_title }}</h1>
+  <ul>
+    {% for el in course_modules %}
+      <li>
+      <div class="module-content__list-item-container">
+        <h3>{{ el.module_title }}</h3>
+        {{ el.module_text|linebreaks }}
+        {% if el.picture_url %}
+          <figure class="module-figure">
+            <p><img src={{ el.picture_url }} class="module-img">
+            <figcaption>{{ el.picture_description }}</figcaption>
+          </figure>
+        {% endif %}
+        {% if el.video_url %}
+          <iframe width="900" height="500" src="{{ el.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="module-video">
+          </iframe>
+        {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}

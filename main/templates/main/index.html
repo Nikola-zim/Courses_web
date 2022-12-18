@@ -1,0 +1,37 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block hero %}
+  <div class="hero-content">
+    <h1>Доступные курсы</h1>
+    <ul class="course-list">
+      {% for el in courses_names %}
+        <li class="course-list-item">
+          <a href= {% url el.courses_url %} hero-content_click-container>
+            <div class="hero-content__list-item-container">
+              <div class="course-img-container">
+                <img src={{el.picture_url}} alt="Django_pic" class="course-img">
+              </div>
+              <h2 class="hero-content__course-header">
+                {{el.title}}
+              </h2>
+              <div class="course-description">
+                {{el.description_text}}
+              </div>
+      {#          <div class="hero-content__learn-button-container">#}
+      {#            <a href="{% url 'about' %}" class="hero-content__learn-button">Обучение</a>#}
+      {#          <p>{% url 'about' %}</p>#}
+      {#          </div>#}
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+    {% include 'main/test.html' %}
+
+{% endblock %}

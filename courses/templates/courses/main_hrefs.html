@@ -1,0 +1,53 @@
+{% extends 'main/layout.html' %}
+{#{% extends 'courses/courses_default.html' %}#}
+
+{% block title %}
+    Введение в Zend Framework
+{% endblock %}
+
+{% block aside %}
+  <aside class="my-aside">
+  <ul>
+    {% for el in course_articles %}
+      <li>
+        <a href= {% url el.article_url %}>
+        <p><b>{{ el.article_title }}</b></p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  </aside>
+{% endblock %}
+
+
+{% block hero %}
+  <h1>{{ h1_title }}</h1>
+    <div class="module-content__list-item-container">
+      <p><a href="https://framework.zend.com/" target="_blank">Сайт Zend Framework</a></p>
+      <p><a href="https://getlaminas.org/" target="_blank">Сайт Laminas</a></p>
+      <p><a href="https://ru.wikipedia.org/wiki/Zend_Framework" target="_blank">Статья на википедии</a></p>
+      <p><a href="https://github.com/zendframework/zendframework" target="_blank">Репозиторий на github</a></p>
+    </div>
+  <ul>
+    {% for el in course_modules %}
+      <li>
+      <div class="module-content__list-item-container">
+        <h3>qwe</h3>
+          <p><a href="https://framework.zend.com/">Официальный сайт Zend Framework</a></p>
+          {% if el.picture_url %}
+            <figure class="module-figure">
+              <p><img src={{ el.picture_url }} class="module-img">
+              <figcaption>{{ el.picture_description }}</figcaption>
+            </figure>
+          {% endif %}
+          {% if el.video_url %}
+            <iframe width="560" height="315" src="{{ el.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="module-video">
+            </iframe>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}

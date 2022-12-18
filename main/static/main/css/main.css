@@ -1,0 +1,240 @@
+body{
+  background: whitesmoke;
+  height: 100vh;
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  font-family: sans-serif;
+}
+
+
+
+.container{
+  max-width: 1500px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*Панель навигации*/
+
+.header{
+  height: 55px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #1B4D7A;
+}
+
+
+.header-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-link{
+  padding: 0.7em;
+  height: 100vh;
+  border: 4px;
+  border-radius: 4px;
+  color: white;
+  transition: background-color 200ms ease-in-out;
+}
+
+.nav-link:hover{
+  border-radius: 4px;
+  background-color: #4BC17D;
+}
+
+
+.nav-list{
+  display: flex;
+}
+
+/* Hero */
+
+.hero-container{
+  padding-bottom: 130px;
+
+}
+.hero-content__list-item-container{
+  box-shadow: 0 0 20px 8px #d0d0d0;
+
+}
+
+
+.hero-content{
+  max-width: 100%;
+}
+
+/* footer */
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+.push {
+  height: 155px;
+}
+.footer{
+  height: 155px;
+  padding-top: 40px;
+  width: 100%;
+  /*position: fixed; bottom: 0;*/
+  background-color: #1B4D7A;
+}
+
+.footer-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-link{
+  padding: 0.5em;
+  color: white;
+}
+
+.footer-list{
+  display: flex;
+
+}
+
+.nav-item{
+}
+
+/*Hero-секция*/
+.course-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 100%;
+  flex: 1 1 33.33%;
+}
+
+.hero-content__course-header{
+  margin: 0 0 0 0;
+}
+
+.hero-content__list-item-container{
+  height: 500px;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  transition: box-shadow 400ms ease-in-out;
+}
+.hero-content__list-item-container:hover{
+  box-shadow: 0 0 20px 8px #4BC17D;
+
+}
+
+.course-list-item:not(:last-child){
+  margin-right: 30px;
+}
+
+.course-list-item{
+  width: 350px;
+}
+
+.course-img-container{
+  height: 150px;
+  /*border: solid #4BC17D 1px;*/
+}
+
+.course-img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.course-description{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*.hero-content__learn-button-container{*/
+/*  padding-top: 30px;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.hero-content__learn-button{*/
+/*  padding: 12px 30px 12px 30px;*/
+/*  display: inline-block;*/
+/*  text-align: center;*/
+/*  width: 100%;*/
+/*  color: White;*/
+/*  border: 4px;*/
+/*  background-color: #1B4D7A;*/
+/*  border-radius: 4px;*/
+/*  transition: background-color 200ms ease-in-out;*/
+/*}*/
+
+/*.hero-content__learn-button:hover{*/
+/*  color: White;*/
+/*  border: 4px;*/
+/*  background-color: #4BC17D;*/
+
+/*}*/
+
+
+/*Боковая панель*/
+
+.aside-left{
+  background: black;
+  margin-top: 20px;
+  padding-top: 5px;
+  width: 350px;
+  height: 500px;
+  color: aliceblue;
+  border-right: 5px solid aliceblue;
+}
+
+.middle{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+/*.aside-left ul{*/
+/*    margin: 0;*/
+/*    padding: 50px 50px 50px ;*/
+/*    list-style: none;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.aside-left ul li{*/
+/*    transition: all 0.5s ease;*/
+/*    padding-top: 50px;*/
+/*    text-decoration: none;*/
+/*    transition: transform 0.6s ease;*/
+/*}*/
+
+/*.aside-left-elem{*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.aside-left ul li:hover, .aside-left ul a:hover{*/
+/*    color: red;*/
+/*    text-decoration: none;*/
+/*    transform: scale(1.03);*/
+/*}*/
+
+
+

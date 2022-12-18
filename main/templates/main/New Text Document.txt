@@ -1,0 +1,11 @@
+<aside class="aside-left">
+{#        <img src="{% static 'main/img/funeral_and_memorial.svg'%}" alt="Logo">#}
+        <i class="fa-sharp fa-solid fa-code"></i>
+        <span class="logo">Card</span>
+        <h3>Navigation</h3>
+        <ul>
+            <a href="{% url 'home' %}" class="aside-left-elem"><li ><i class="fa-solid fa-house"></i>Home</li></a>
+            <a href="{% url 'about' %}"><li>About Us</li></a>
+            <a href=""><li>Contacts</li></a>
+        </ul>
+    </aside>
